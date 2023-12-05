@@ -1,23 +1,29 @@
  
 const questions = [
-  {
-      question: "Which keyword is used to declare a JavaScript variable?",
-      answers: ["var", "string","number"],
-      correctAnswer: "var"
+  
+    {
+        question: "Which is not an HTML element?",
+        answers: ["<p>","<h2>","<return>", "<ul>"],
+        correctAnswer: "<return>"
+    },
+    {
+      question: "Which keyword is not used to declare a JavaScript variable?",
+      answers: ["var", "let","number", "const"],
+      correctAnswer: "number"
   },
   {
       question: "Which event is for clicking an HTML element?",
-      answers: ["click","keydown","mouseover"],
+      answers: ["click","keydown","mouseover", "enter"],
       correctAnswer: "click"
   },
   {
       question: "Which method loops through an array?",
-      answers: ["for","forEach","loop"],
+      answers: ["for","forEach","switch","loop"],
       correctAnswer: "forEach"
   },
   {
       question: "Which method merges two arrays?",
-      answers: ["contain","concat","add"],
+      answers: ["contain","stringify","concat","add"],
       correctAnswer: "concat"
   }
 ]
