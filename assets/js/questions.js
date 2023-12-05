@@ -1,15 +1,23 @@
  
-
- export const questions = [
-    {
-      question: "What is the capital of France?",
-      answers: ["Paris", "Berlin", "Madrid", "Rome"],
-      correctIndex: 0
-    },
-    {
-      question: "Which planet is known as the Red Planet?",
-      answers: ["Venus", "Mars", "Jupiter", "Saturn"],
-      correctIndex: 1
-    },
-    
-  ];
+const questions = [
+  {
+      question: "Which keyword is used to declare a JavaScript variable?",
+      answers: ["var", "string","number"],
+      correctAnswer: "var"
+  },
+  {
+      question: "Which event is for clicking an HTML element?",
+      answers: ["click","keydown","mouseover"],
+      correctAnswer: "click"
+  },
+  {
+      question: "Which method loops through an array?",
+      answers: ["for","forEach","loop"],
+      correctAnswer: "forEach"
+  },
+  {
+      question: "Which method merges two arrays?",
+      answers: ["contain","concat","add"],
+      correctAnswer: "concat"
+  }
+]
