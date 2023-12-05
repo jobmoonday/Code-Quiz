@@ -1,6 +1,6 @@
-let startButtonEl = document.getElementById("start");
-let startScreenDivEl = document.getElementById("start-screen");
-let questionsDivEl = document.getElementById("questions");
+let startBtnEl = document.getElementById("start");
+let startScreenEl = document.getElementById("start-screen");
+let questionsEl = document.getElementById("questions");
 let questionTitleEl = document.getElementById("question-title");
 let optionsDivEl = document.getElementById("choices");
 let endScreenDiv = document.getElementById("end-screen");
@@ -24,11 +24,11 @@ for(var j=1; j<=4; j++) {
     optionsDivEl.appendChild(button);
 }
 
-startButtonEl.addEventListener("click", function() {
+startBtnEl.addEventListener("click", function() {
     i=0;
     score=0;
-    startScreenDivEl.setAttribute("class", "hide");
-    questionsDivEl.setAttribute("class", "start");
+    startScreenEl.setAttribute("class", "hide");
+    questionsEl.setAttribute("class", "start");
     timerCount = questions.length * 10;
     startTimer();
     getQuestion();
@@ -64,7 +64,7 @@ button1.addEventListener("click", function() {
         clearInterval(timer);
         feedbackDivEl.setAttribute("class", "feedback start");
         feedbackDivEl.textContent = isCorrect;
-        questionsDivEl.setAttribute("class", "hide");
+        questionsEl.setAttribute("class", "hide");
         endScreenDiv.setAttribute("class", "start");
         finalScoreSpanEl.textContent = score;
     }
@@ -89,7 +89,7 @@ button2.addEventListener("click", function() {
         clearInterval(timer);
         feedbackDivEl.setAttribute("class", "feedback start");
         feedbackDivEl.textContent = isCorrect;
-        questionsDivEl.setAttribute("class", "hide");
+        questionsEl.setAttribute("class", "hide");
         endScreenDiv.setAttribute("class", "start");
         finalScoreSpanEl.textContent = score;
     }
@@ -114,7 +114,7 @@ button3.addEventListener("click", function() {
         clearInterval(timer);
         feedbackDivEl.setAttribute("class", "feedback start");
         feedbackDivEl.textContent = isCorrect;
-        questionsDivEl.setAttribute("class", "hide");
+        questionsEl.setAttribute("class", "hide");
         endScreenDiv.setAttribute("class", "start");
         finalScoreSpanEl.textContent = score;
     }
@@ -140,7 +140,7 @@ button1.addEventListener("click", function() {
         clearInterval(timer);
         feedbackDivEl.setAttribute("class", "feedback start");
         feedbackDivEl.textContent = isCorrect;
-        questionsDivEl.setAttribute("class", "hide");
+        questionsEl.setAttribute("class", "hide");
         endScreenDiv.setAttribute("class", "start");
         finalScoreSpanEl.textContent = score;
     }
@@ -153,7 +153,7 @@ function startTimer() {
       timeSpanEl.textContent = timerCount;
       if (timerCount === 0) {
         clearInterval(timer);
-        questionsDivEl.setAttribute("class", "hide");
+        questionsEl.setAttribute("class", "hide");
         endScreenDiv.setAttribute("class", "start");
         finalScoreSpanEl.textContent = score;
       }
@@ -170,7 +170,7 @@ submitButtonEl.addEventListener("click", function() {
     scoresArray.push(text);
     localStorage.setItem("scores", JSON.stringify(scoresArray));
     endScreenDiv.setAttribute("class", "hide");
-    startScreenDivEl.setAttribute("class", "start");
+    startScreenEl.setAttribute("class", "start");
     initialTextEl.value = "";
 });
 
